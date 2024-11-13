@@ -9,7 +9,7 @@ import Circle from './Component/Circle';
 function App() {
   return (
     <div>
-      <Circle/>
+      <Home/>
       
       
     </div>

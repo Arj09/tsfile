@@ -11,6 +11,16 @@ export default function Home() {
     const [enabled, setEnabled] = useState<boolean>(false);
 
 
+    const handlepopup = ()=>{
+        setEnabled(true)
+    }
+
+
+    const handleClose = ()=>{
+        setEnabled(false)
+    }
+
+
 
     
   return (
@@ -33,7 +43,7 @@ export default function Home() {
                 <div  className=' absolute w-1/4 h-96 rounded bg-white flex flex-col mx-auto top-52 right-0 left-0 px-5 py-5'>
                     <div className=' flex flex-row justify-between pb-5 '>
                         <text>Add Task</text>
-                        <text>X</text>
+                        <text className=' cursor-pointer' onClick={handleClose}>X</text>
 
                     </div>
                     <text className=' bg-gray-300 w-full h-1 mx-auto  '></text>
@@ -102,7 +112,7 @@ export default function Home() {
                
 
                 <div className=' w-11/12 bg-black text-white h-8  rounded flex flex-row justify-center pt-1'>
-                    <text >Add Task</text>
+                    <text className=' cursor-pointer' onClick={handlepopup}>Add Task</text>
 
                 </div>
 
